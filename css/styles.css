@@ -1,0 +1,314 @@
+* {
+    box-sizing: border-box;
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#contenedor_carga {
+    background-color: #ececec;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga {
+    border: 15px solid #ccc;
+    border-top-color: #f4266a;
+    border-top-style: groove;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    color: #fdfd02;
+    background: url(/images/fondoquiensoy2.gif)no-repeat center center fixed;
+    background-size: cover;
+}
+
+.centrado {
+    text-align: center;
+}
+
+.espacios {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.espacios1 {
+    padding-top: 75px;
+    padding-bottom: 75px;
+}
+
+.paddingforcol {
+    padding: 60px;
+}
+
+.logo {
+    min-width: 0;
+    max-width: 70%;
+    padding: 20px;
+}
+
+.nav-item {
+    margin-right: 30px;
+}
+
+.splash {
+    width: 100%;
+    height: 100vh;
+    background: url(../images/fondoanimadocolorido.gif)no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+}
+
+.splash h1 {
+    background: #fdfd02;
+    color: #fd00f6;
+    display: inline-block;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.text {
+    margin-top: 10vh;
+}
+
+.splash .btn {
+    background-color: #bc1142;
+    font-weight: 500;
+}
+
+.splash .btn:hover {
+    background-color: #01ecfc;
+}
+
+.row .col-md-3 .card {
+    margin-top: 70px;
+}
+
+.row .col-md-3 {
+    justify-content: center;
+    display: flex;
+}
+
+#letritas {
+    background: #f2f2f2;
+}
+
+.redi {
+    color: #bc1142;
+}
+
+.painted {
+    color: grey;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.frases i {
+    font-size: 100px;
+}
+
+.frases h2 {
+    padding: 20px;
+}
+
+.quotes p {
+    padding: 30px;
+}
+
+.navbar-collapse {
+    flex-grow: 0;
+}
+
+.displayflex {
+    display: flex;
+}
+
+.minameis {
+    background: #607D8B;
+    color: whitesmoke;
+    display: inline-block;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.im {
+    display: inline-block;
+}
+
+.descripcion {
+    background: url(/images/fondoquiensoy2.gif)no-repeat center center fixed;
+    background-size: cover;
+}
+
+.descripcion1 {
+    background-color: #f2f2f2;
+}
+
+.wrapper {
+    display: inline-flex;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.wrapper .icon {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 15px;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    color: #666;
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background-color: #ffffff;
+    color: #ffffff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background-color: #ffffff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span, .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper .facebook:hover, .wrapper .facebook:hover .tooltip, .wrapper .facebook:hover .tooltip::before {
+    background-color: #3b5999;
+    color: #ffffff;
+}
+
+.wrapper .twitter:hover, .wrapper .twitter:hover .tooltip, .wrapper .twitter:hover .tooltip::before {
+    background-color: #46c1f6;
+    color: #ffffff;
+}
+
+.wrapper .instagram:hover, .wrapper .instagram:hover .tooltip, .wrapper .instagram:hover .tooltip::before {
+    background-color: #e1306c;
+    color: #ffffff;
+}
+
+.wrapper .github:hover, .wrapper .github:hover .tooltip, .wrapper .github:hover .tooltip::before {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.wrapper .youtube:hover, .wrapper .youtube:hover .tooltip, .wrapper .youtube:hover .tooltip::before {
+    background-color: #de463b;
+    color: #ffffff;
+}
+
+section {
+    justify-content: center;
+    max-width: auto
+}
+
+footer {
+    background-color: #bc1142;
+    color: #fff;
+    padding: 1rem;
+    place-items: center;
+    display: grid;
+    padding-top: 150px;
+}
+
+li {
+    text-decoration: none;
+    list-style: none;
+    color: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    color: #adb5bd;
+    opacity: 1;
+}
+
+a:hover {
+    color: #666;
+}
+
+footer p {
+    color: #f0f9ff;
+    font-weight: bolder;
+    opacity: 0.8;
+}
+
+.fotoinfo {
+    min-width: 0;
+    max-width: 70%;
+    min-height: 0%;
+    max-height: 70%;
+    border-radius: 50px;
+    float: right;
+}
+
+.aligncenter {
+    align-items: center;
+}
