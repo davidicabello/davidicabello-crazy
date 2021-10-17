@@ -50,7 +50,7 @@
 
 body {
     color: #fdfd02;
-    background: url(/images/fondoquiensoy2.gif)no-repeat center center fixed;
+    background: url(../images/fondoquiensoy2.gif)no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 
 .descripcion {
-    background: url(/images/fondoquiensoy2.gif)no-repeat center center fixed;
+    background: url(../images/fondoquiensoy2.gif)no-repeat center center fixed;
     background-size: cover;
 }
 
